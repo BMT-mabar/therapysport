@@ -70,17 +70,17 @@
 
         /* Header backdrop states */
         .header-transparent {
-            background: rgba(7, 12, 22, 0.75);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .header-solid {
-            background: rgba(15, 23, 42, 0.96);
+            background: rgba(7, 12, 22, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-solid {
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.85);
         }
 
         /* Glassmorphism Cards */
@@ -131,14 +131,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 sm:h-24">
                 
-                <!-- BRAND LOGO (Protected Flex-Shrink-0 & Fixed Size) -->
-                <a href="#hero" class="flex items-center gap-3 group focus:outline-none flex-shrink-0">
-                    <div class="relative flex items-center justify-center p-2 bg-white/95 rounded-2xl border border-physio-lightCyan/40 shadow-xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
-                        <img src="./assets/images/logo_clean.png" alt="TherapySport Logo" class="h-10 sm:h-12 w-auto max-w-[140px] sm:max-w-[170px] object-contain flex-shrink-0">
+                <!-- BRAND LOGO (Enhanced Crisp Contrast & Standout White Container) -->
+                <a href="#hero" class="flex items-center gap-3.5 group focus:outline-none flex-shrink-0">
+                    <div class="relative flex items-center justify-center p-2 bg-white rounded-2xl border-2 border-physio-lightCyan/60 shadow-2xl shadow-physio-cyan/25 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                        <img src="./assets/images/logo_clean.png" alt="TherapySport Logo" class="h-10 sm:h-12 w-auto max-w-[140px] sm:max-w-[175px] object-contain flex-shrink-0 brightness-105 contrast-105">
                     </div>
                     <div class="flex flex-col flex-shrink-0">
                         <span class="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-physio-lightCyan transition-colors">TherapySport</span>
-                        <span class="text-[11px] sm:text-xs text-physio-lightCyan font-bold tracking-wide" data-i18n="header.subtitle">ד"ר דוד גרבר | פיזיותרפיה ושיקום</span>
+                        <span class="text-[11px] sm:text-xs text-physio-lightCyan font-extrabold tracking-wide" data-i18n="header.subtitle">ד"ר דוד גרבר | פיזיותרפיה ושיקום</span>
                     </div>
                 </a>
 
@@ -189,7 +189,7 @@
             <div>
                 <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
                     <div class="flex items-center gap-3">
-                        <div class="p-1 bg-white/95 rounded-xl border border-physio-lightCyan/40 shadow">
+                        <div class="p-1.5 bg-white rounded-xl border border-physio-lightCyan/60 shadow">
                             <img src="./assets/images/logo_clean.png" alt="TherapySport" class="h-9 w-auto">
                         </div>
                         <span class="font-black text-white text-lg">TherapySport</span>
@@ -287,6 +287,7 @@
 
     <!-- ========================================== -->
     <!-- SECTION 3: QUICK CONTACT & TRUST BAR      -->
+    <!-- (Updated to Google Maps Navigation Button) -->
     <!-- ========================================== -->
     <section id="quick-contact" class="py-8 bg-physio-navy border-y border-slate-800 relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -303,9 +304,9 @@
                     <span data-i18n="quick.call">חיוג: 052-3630709</span>
                 </a>
 
-                <a href="https://waze.com/ul?q=Ma'ale+HaCarmel+18+Zichron+Yaakov" target="_blank" rel="noopener noreferrer" class="glass-card hover:bg-slate-800 text-white p-3.5 rounded-2xl font-extrabold text-sm shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02]">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+David+Garber+TherapySport+physiotherapy+Zichron+Yaakov" target="_blank" rel="noopener noreferrer" class="glass-card hover:bg-slate-800 text-white p-3.5 rounded-2xl font-extrabold text-sm shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02]">
                     <span>📍</span>
-                    <span data-i18n="quick.waze">ניווט ב-Waze לקליניקה</span>
+                    <span data-i18n="quick.maps">ניווט ב-Google Maps לקליניקה</span>
                 </a>
             </div>
 
@@ -379,20 +380,20 @@
 
     <!-- ========================================== -->
     <!-- SECTION 5: MEET THERAPYSPORT              -->
-    <!-- Updated Title & Interactive Gallery Carousel -->
+    <!-- 7-Slide Interactive Carousel & Expanded Modalities -->
     <!-- ========================================== -->
     <section id="about" class="py-20 relative border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
-                <!-- Interactive High-End Photo Gallery Carousel -->
+                <!-- 7-Slide Interactive Photo Gallery Carousel (No Headstand Image) -->
                 <div class="lg:col-span-6">
-                    <div class="relative h-80 sm:h-96 rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl group" id="gallery-carousel-card">
+                    <div class="relative h-80 sm:h-[400px] rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl group" id="gallery-carousel-card">
                         
                         <!-- Slide 1 -->
                         <div class="gallery-slide absolute inset-0 transition-opacity duration-700 opacity-100">
-                            <img src="./assets/images/clinic-treatment-1.jpg" alt="אבחון ביומכני מתקדם" class="w-full h-full object-cover">
+                            <img src="./assets/images/clinic-treatment-1.jpg" alt="אבחון תנועה וביומכניקה" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end text-rtl-right">
                                 <span class="bg-physio-cyan/30 text-physio-lightCyan text-xs font-bold px-3 py-1 rounded-md inline-block w-max mb-1 border border-physio-cyan/40" data-i18n="gallery.s1Badge">אבחון ביומכני</span>
                                 <h4 class="text-lg font-black text-white" data-i18n="gallery.s1Title">אבחון תנועה וביומכניקה</h4>
@@ -402,7 +403,7 @@
 
                         <!-- Slide 2 -->
                         <div class="gallery-slide absolute inset-0 transition-opacity duration-700 opacity-0">
-                            <img src="./assets/images/clinic-treatment-5.jpg" alt="טיפול מנואלי ושיקום" class="w-full h-full object-cover">
+                            <img src="./assets/images/clinic-treatment-5.jpg" alt="טיפול מנואלי ותרגול" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end text-rtl-right">
                                 <span class="bg-emerald-500/30 text-emerald-300 text-xs font-bold px-3 py-1 rounded-md inline-block w-max mb-1 border border-emerald-500/40" data-i18n="gallery.s2Badge">שיקום אקטיבי</span>
                                 <h4 class="text-lg font-black text-white" data-i18n="gallery.s2Title">טיפול ידני ותרגול מותאם</h4>
@@ -430,6 +431,36 @@
                             </div>
                         </div>
 
+                        <!-- Slide 5 -->
+                        <div class="gallery-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="./assets/images/clinic-treatment-2.jpg" alt="שיקום ברכיים ופציעות ספורט" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end text-rtl-right">
+                                <span class="bg-sky-500/30 text-sky-300 text-xs font-bold px-3 py-1 rounded-md inline-block w-max mb-1 border border-sky-500/40" data-i18n="gallery.s5Badge">פציעות ספורט</span>
+                                <h4 class="text-lg font-black text-white" data-i18n="gallery.s5Title">שיקום ברכיים ופציעות ספורט</h4>
+                                <p class="text-xs text-slate-300" data-i18n="gallery.s5Desc">טיפול עומסים בברך, רצועות וגידים לרצים וספורטאים</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="gallery-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="./assets/images/clinic-treatment-3.jpg" alt="שיקום גידים ואכילס" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end text-rtl-right">
+                                <span class="bg-rose-500/30 text-rose-300 text-xs font-bold px-3 py-1 rounded-md inline-block w-max mb-1 border border-rose-500/40" data-i18n="gallery.s6Badge">שיקום גידים</span>
+                                <h4 class="text-lg font-black text-white" data-i18n="gallery.s6Title">שיקום גידים ואכילס</h4>
+                                <p class="text-xs text-slate-300" data-i18n="gallery.s6Desc">העמסה הדרגתית מבוססת מחקר להחלמת רקמת הגיד</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 7 -->
+                        <div class="gallery-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <img src="./assets/images/dr-garber-clinic.jpg" alt="אווירת הקליניקה" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end text-rtl-right">
+                                <span class="bg-teal-500/30 text-teal-300 text-xs font-bold px-3 py-1 rounded-md inline-block w-max mb-1 border border-teal-500/40" data-i18n="gallery.s7Badge">הקליניקה</span>
+                                <h4 class="text-lg font-black text-white" data-i18n="gallery.s7Title">ציוד קליני וסביבת טיפול מתקדמת</h4>
+                                <p class="text-xs text-slate-300" data-i18n="gallery.s7Desc">קליניקה מודרנית ומאובזרת בזיכרון יעקב</p>
+                            </div>
+                        </div>
+
                         <!-- Gallery Controls -->
                         <button id="gallery-prev-btn" type="button" aria-label="Previous Slide" class="absolute top-1/2 left-3 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all cursor-pointer shadow-lg">
                             <span class="dir-arrow">←</span>
@@ -438,18 +469,21 @@
                             <span class="dir-arrow">→</span>
                         </button>
 
-                        <!-- Gallery Dots -->
-                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10" id="gallery-dots">
+                        <!-- Gallery 7 Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10" id="gallery-dots">
                             <span data-gallery-dot="0" class="w-2.5 h-2.5 rounded-full bg-physio-cyan cursor-pointer transition-all shadow"></span>
                             <span data-gallery-dot="1" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all"></span>
                             <span data-gallery-dot="2" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all"></span>
                             <span data-gallery-dot="3" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all"></span>
+                            <span data-gallery-dot="4" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all"></span>
+                            <span data-gallery-dot="5" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all"></span>
+                            <span data-gallery-dot="6" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all"></span>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- Text Content & Modalities List -->
+                <!-- Text Content & Expanded 6 Modalities Grid -->
                 <div class="lg:col-span-6 space-y-5 text-rtl-right">
                     <span class="text-physio-lightCyan font-bold text-xs tracking-wider uppercase" data-i18n="about.tag">הכירו את TherapySport</span>
                     <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight" data-i18n="about.title">
@@ -460,16 +494,16 @@
                         קליניקת TherapySport בזיכרון יעקב בהנהלת ד״ר דוד גרבר מציעה מענה מקיף ומקצועי לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני והתאמת מדרסים. הגישה הקלינית מתמקדת בהבנת הגורמים התורמים לפציעה ולא רק בסימפטומים, תוך ליווי אישי בגובה העיניים.
                     </p>
 
-                    <!-- Consolidated Therapeutic Modalities Box -->
+                    <!-- Consolidated Therapeutic Modalities Box (6 Items with Insoles & 1-on-1 Care) -->
                     <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
                         <div class="flex items-center gap-2 text-white font-extrabold text-sm sm:text-base border-b border-slate-800 pb-2">
                             <span>🩺</span>
                             <span data-i18n="modalities.title">כלים טיפוליים לפי הצורך</span>
                         </div>
                         <p class="text-xs text-slate-300 leading-relaxed" data-i18n="modalities.desc">
-                            במסגרת תוכנית הטיפול ניתן לשלב טכניקות ידניות, דיקור יבש, טייפינג וכלים פיזיקליים.
+                            במסגרת תוכנית הטיפול ניתן לשלב טכניקות ידניות, דיקור יבש, טייפינג, מדרסים ביומכניים, מיטת מתיחה ולייזר וליווי אישי 1-על-1.
                         </p>
-                        <div class="grid grid-cols-2 gap-2 pt-1">
+                        <div class="grid grid-cols-2 gap-2.5 pt-1">
                             <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2">
                                 <span class="text-physio-lightCyan">✓</span>
                                 <span data-i18n="modalities.m1">טכניקות ידניות</span>
@@ -485,6 +519,14 @@
                             <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2">
                                 <span class="text-physio-lightCyan">✓</span>
                                 <span data-i18n="modalities.m4">מיטת מתיחה ולייזר</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2">
+                                <span class="text-physio-lightCyan">✓</span>
+                                <span data-i18n="modalities.m5">מדרסים ביומכניים</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2">
+                                <span class="text-physio-lightCyan">✓</span>
+                                <span data-i18n="modalities.m6">טיפול אישי 1-על-1</span>
                             </div>
                         </div>
                     </div>
@@ -525,7 +567,7 @@
                 <p class="text-slate-400 mt-3 text-sm sm:text-base" data-i18n="pain.subtitle">בחרו אזור טיפול לקבלת פירוט קליני, גישת האבחון והפתרונות המותאמים.</p>
             </div>
 
-            <!-- Responsive Flex-Wrap Tabs Container (No overflow or hidden buttons) -->
+            <!-- Responsive Flex-Wrap Tabs Container -->
             <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8 w-full" role="tablist" aria-label="Services & Pain Areas">
                 <button type="button" data-pain="knee" id="pain-tab-knee" role="tab" aria-selected="true" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-physio-cyan text-white shadow-md cursor-pointer">
                     🦵 <span data-i18n="pain.knee">ברך</span>
@@ -579,7 +621,6 @@
 
     <!-- ========================================== -->
     <!-- SECTION 7: FOLLOW US ON INSTAGRAM          -->
-    <!-- Positioned directly under Services Hub     -->
     <!-- ========================================== -->
     <section id="instagram" class="py-20 bg-physio-navy/80 border-t border-slate-800 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -743,7 +784,6 @@
 
     <!-- ========================================== -->
     <!-- SECTION 9: GUIDES & VIDEO TUTORIALS HUB   -->
-    <!-- (Renamed from Professional Articles)      -->
     <!-- ========================================== -->
     <section id="articles" class="py-20 bg-physio-navy/80 border-t border-slate-800 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -853,7 +893,7 @@
 
     <!-- ========================================== -->
     <!-- SECTION 10: DIRECT CONTACT HUB             -->
-    <!-- Updated Phone & Exact Google Opening Hours -->
+    <!-- Updated Phone & Exact Google Opening Hours & Google Maps Nav -->
     <!-- ========================================== -->
     <section id="contact" class="py-20 relative bg-physio-navy/60 border-t border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -865,7 +905,7 @@
                     פנייה ישירה ומהירה מתבצעת ישירות ב-WhatsApp או בשיחת טלפון. ד״ר דוד גרבר יענה לכם בהקדם לבדיקת התאמה לטיפול בקליניקה.
                 </p>
 
-                <!-- Big Direct Action Buttons (Only 052-3630709) -->
+                <!-- Big Direct Action Buttons -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mt-8">
                     <a href="https://wa.me/972523630709?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%B4%D7%A8%20%D7%92%D7%A8%D7%91%D7%A8%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%90%D7%91%D7%97%D7%95%D7%9F%20%D7%A4%D7%99%D7%96%D7%99%D7%95%D7%AA%D7%A8%D7%A4%D7%99%D7%94%20%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%20%D7%91%D7%B4TherapySport." target="_blank" rel="noopener noreferrer" class="bg-physio-whatsapp hover:bg-physio-whatsappHover text-white p-5 rounded-2xl font-extrabold text-base shadow-xl flex items-center justify-center gap-3 transition-all hover:scale-105">
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
@@ -878,9 +918,9 @@
                     </a>
                 </div>
 
-                <!-- Clinic Details & Map Navigation -->
+                <!-- Clinic Details & Google Maps Navigation Link -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mt-6 text-rtl-right">
-                    <a href="https://waze.com/ul?q=Ma'ale+HaCarmel+18+Zichron+Yaakov" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center gap-3 hover:border-physio-lightCyan transition-all">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+David+Garber+TherapySport+physiotherapy+Zichron+Yaakov" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center gap-3 hover:border-physio-lightCyan transition-all">
                         <span class="text-2xl">📍</span>
                         <div>
                             <div class="text-xs font-bold text-white" data-i18n="contact.addrTitle">כתובת הקליניקה</div>
@@ -993,7 +1033,7 @@
                 "hero.ctaSecondary": "הגישה של TherapySport",
                 "quick.wa": "פנייה ישירה ב-WhatsApp",
                 "quick.call": "חיוג: 052-3630709",
-                "quick.waze": "ניווט ב-Waze לקליניקה",
+                "quick.maps": "📍 ניווט ב-Google Maps לקליניקה",
                 "trust.s1": "טיפול אישי 1 על 1",
                 "trust.s2": "פיזיותרפיסט משנת 1997",
                 "trust.s3": "Doctor of Physical Therapy",
@@ -1013,12 +1053,23 @@
                 "gallery.s4Badge": "יחס אישי",
                 "gallery.s4Title": "ליווי מקצועי 1-על-1",
                 "gallery.s4Desc": "בניית תוכנית שיקום אישית ומדויקת עד לחזרה מלאה",
+                "gallery.s5Badge": "פציעות ספורט",
+                "gallery.s5Title": "שיקום ברכיים ופציעות ספורט",
+                "gallery.s5Desc": "טיפול עומסים בברך, רצועות וגידים לרצים וספורטאים",
+                "gallery.s6Badge": "שיקום גידים",
+                "gallery.s6Title": "שיקום גידים ואכילס",
+                "gallery.s6Desc": "העמסה הדרגתית מבוססת מחקר להחלמת רקמת הגיד",
+                "gallery.s7Badge": "הקליניקה",
+                "gallery.s7Title": "ציוד קליני וסביבת טיפול מתקדמת",
+                "gallery.s7Desc": "קליניקה מודרנית ומאובזרת בזיכרון יעקב",
                 "modalities.title": "כלים טיפוליים לפי הצורך",
-                "modalities.desc": "במסגרת תוכנית הטיפול ניתן לשלב טכניקות ידניות, דיקור יבש, טייפינג וכלים פיזיקליים.",
+                "modalities.desc": "במסגרת תוכנית הטיפול ניתן לשלב טכניקות ידניות, דיקור יבש, טייפינג, מדרסים ביומכניים, מיטת מתיחה ולייזר וליווי אישי 1-על-1.",
                 "modalities.m1": "טכניקות ידניות",
                 "modalities.m2": "דיקור יבש (Dry Needling)",
                 "modalities.m3": "חבישות טייפינג",
                 "modalities.m4": "מיטת מתיחה ולייזר",
+                "modalities.m5": "מדרסים ביומכניים",
+                "modalities.m6": "טיפול אישי 1-על-1",
                 "pain.tag": "מרכז הטיפול והאבחון האינטראקטיבי",
                 "pain.title": "מענה פיזיותרפי מקיף לפי אזור קושי",
                 "pain.subtitle": "בחרו אזור טיפול לקבלת פירוט קליני, גישת האבחון והפתרונות המותאמים.",
@@ -1105,7 +1156,7 @@
                 "hero.ctaSecondary": "TherapySport Approach",
                 "quick.wa": "Direct WhatsApp Inquiry",
                 "quick.call": "Call: 052-3630709",
-                "quick.waze": "Navigate via Waze",
+                "quick.maps": "📍 Navigate via Google Maps",
                 "trust.s1": "1-on-1 Personal Care",
                 "trust.s2": "Physical Therapist since 1997",
                 "trust.s3": "Doctor of Physical Therapy",
@@ -1125,12 +1176,23 @@
                 "gallery.s4Badge": "1-on-1 Care",
                 "gallery.s4Title": "1-on-1 Dedicated Rehab",
                 "gallery.s4Desc": "Tailored step-by-step recovery until full athletic return",
+                "gallery.s5Badge": "Sports Injuries",
+                "gallery.s5Title": "Knee & Sports Injury Rehab",
+                "gallery.s5Desc": "Managing patellar, ligament, and tendon load for athletes",
+                "gallery.s6Badge": "Tendon Rehab",
+                "gallery.s6Title": "Tendon & Achilles Recovery",
+                "gallery.s6Desc": "Evidence-based progressive loading for tendon fiber healing",
+                "gallery.s7Badge": "Clinic Environment",
+                "gallery.s7Title": "Advanced Equipment & Clinic Atmosphere",
+                "gallery.s7Desc": "Modern fully-equipped physical therapy clinic in Zichron Yaakov",
                 "modalities.title": "Therapeutic Modalities",
-                "modalities.desc": "Integrated as clinically indicated: manual therapy, dry needling, taping, and physical modalities.",
+                "modalities.desc": "Integrated as clinically indicated: manual therapy, dry needling, taping, biomechanical insoles, traction bed & laser, and 1-on-1 care.",
                 "modalities.m1": "Manual Therapy",
                 "modalities.m2": "Dry Needling",
                 "modalities.m3": "Kinesio Taping",
                 "modalities.m4": "Traction Bed & Laser",
+                "modalities.m5": "Biomechanical Insoles",
+                "modalities.m6": "1-on-1 Personal Care",
                 "pain.tag": "Interactive Diagnosis & Services Hub",
                 "pain.title": "Comprehensive PT Care by Target Area",
                 "pain.subtitle": "Select a condition to view clinical assessment insights and tailored treatment strategies.",
@@ -1301,7 +1363,7 @@
                     desc: "דורבן בכף הרגל (Plantar Fasciitis), דלקת או רגישות בגיד אכילס, נקעים חוזרים בקרסול וקריסת קשת. האבחון כולל ניתוח דריכה דינמי והתאמת מדרסים ביומכניים ייעודיים להפחתת עומסים.",
                     tags: ["דורבן בכף הרגל", "גיד אכילס", "מדרסים ביומכניים", "נקע בקרסול", "פרונציית יתר"],
                     cta: "תיאום אבחון כף רגל ומדרסים",
-                    waMsg: "שלום ד\"ר גרבר, אני מעוניין/ת לתאם אבחון פיזיותרפיה בנושא כף רגל, אכילס ومדרסים."
+                    waMsg: "שלום ד\"ר גרבר, אני מעוניין/ת לתאם אבחון פיזיותרפיה בנושא כף רגל, אכילס ומדרסים."
                 },
                 hip: {
                     title: "ירך, אגן ומפרק SIJ",
@@ -1464,7 +1526,7 @@
         let currentReviewIndex = 0;
         let currentGalleryIndex = 0;
         const totalReviews = 5;
-        const totalGallerySlides = 4;
+        const totalGallerySlides = 7;
 
         // Set Language Function
         function setLanguage(lang) {
@@ -1642,7 +1704,7 @@
                             <span class="text-xs text-slate-400">לימודי פיזיותרפיה רפואיים בהולנד והתמחות בטכניקות ידניות מנואליות מתקדמות.</span>
                         </div>
                         <div class="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                            <strong class="text-white block text-sm">🏛️ Doctor of Physical Therapy (DPT) מ־Dominican University New York</strong>
+                            <strong class="text-white block text-sm">🏛️ Doctor of Physical Therapy (PT, DPT) מ־Dominican University New York</strong>
                             <span class="text-xs text-slate-400">תואר דוקטורט קליני בפיזיותרפיה מארצות הברית (PT, DPT).</span>
                         </div>
                         <div class="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
