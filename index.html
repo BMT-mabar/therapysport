@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TherapySport - ד"ר דוד גרבר | פיזיותרפיית ספורט, שיקום אורתופדי וביומכניקה</title>
+    <title>TherapySport - ד'ר דוד גרבר | פיזיותרפיית ספורט, שיקום אורתופדי וביומכניקה</title>
     <meta name="description" content="קליניקת פיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני ומדרסים בהנהלת ד&quot;ר דוד גרבר (PT, DPT) בזיכרון יעקב.">
     
     <!-- Favicon -->
@@ -143,7 +143,7 @@
                     </div>
                     <div class="flex flex-col flex-shrink-0">
                         <span class="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-physio-lightCyan transition-colors">TherapySport</span>
-                        <span class="text-[11px] sm:text-xs text-physio-lightCyan font-extrabold tracking-wide" data-i18n="header.subtitle">ד"ר דוד גרבר | פיזיותרפיה ושיקום</span>
+                        <span class="text-[11px] sm:text-xs text-physio-lightCyan font-extrabold tracking-wide" data-i18n="header.subtitle">ד'ר דוד גרבר | פיזיותרפיה ושיקום</span>
                     </div>
                 </a>
 
@@ -158,9 +158,9 @@
 
                 <!-- Actions: Lang Toggle & WhatsApp CTA -->
                 <div class="hidden lg:flex items-center gap-3.5 flex-shrink-0">
-                    <div class="bg-slate-900/90 p-1 rounded-full border border-slate-700 flex items-center shadow-inner">
-                        <button id="lang-he-btn" type="button" class="px-3.5 py-1 rounded-full text-xs font-extrabold transition-all bg-physio-cyan text-white shadow cursor-pointer">עברית</button>
-                        <button id="lang-en-btn" type="button" class="px-3.5 py-1 rounded-full text-xs font-extrabold transition-all text-slate-400 hover:text-white cursor-pointer">English</button>
+                    <div class="bg-slate-900/90 p-1 rounded-full border border-slate-700 flex items-center shadow-inner relative z-50">
+                        <button id="lang-he-btn" onclick="setLanguage('he')" type="button" class="px-3.5 py-1 rounded-full text-xs font-extrabold transition-all bg-physio-cyan text-white shadow cursor-pointer relative z-50">עברית</button>
+                        <button id="lang-en-btn" onclick="setLanguage('en')" type="button" class="px-3.5 py-1 rounded-full text-xs font-extrabold transition-all text-slate-400 hover:text-white cursor-pointer relative z-50">English</button>
                     </div>
 
                     <a id="header-whatsapp-btn" href="https://wa.me/972523630709" target="_blank" rel="noopener noreferrer" class="bg-physio-whatsapp hover:bg-physio-whatsappHover text-white px-5 py-2.5 rounded-full font-extrabold text-sm shadow-lg shadow-physio-whatsapp/20 hover:scale-105 transition-all flex items-center gap-2 flex-shrink-0">
@@ -172,11 +172,11 @@
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-3 lg:hidden flex-shrink-0">
                     <div class="bg-slate-900/90 p-1 rounded-full border border-slate-700 flex items-center">
-                        <button id="mobile-lang-he" type="button" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer">HE</button>
-                        <button id="mobile-lang-en" type="button" class="px-2.5 py-0.5 rounded-full text-xs font-bold text-slate-400 cursor-pointer">EN</button>
+                        <button id="mobile-lang-he" onclick="setLanguage('he')" type="button" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer">HE</button>
+                        <button id="mobile-lang-en" onclick="setLanguage('en')" type="button" class="px-2.5 py-0.5 rounded-full text-xs font-bold text-slate-400 cursor-pointer">EN</button>
                     </div>
 
-                    <button id="mobile-menu-toggle" type="button" aria-label="Open menu" class="p-2 text-slate-200 hover:text-white focus:outline-none cursor-pointer">
+                    <button id="mobile-menu-toggle" onclick="openMobileMenu()" type="button" aria-label="Open menu" class="p-2 text-slate-200 hover:text-white focus:outline-none cursor-pointer">
                         <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -199,21 +199,21 @@
 
                     <!-- Mobile Drawer Language Switcher -->
                     <div class="bg-slate-900 p-1 rounded-full border border-slate-700 flex items-center gap-1">
-                        <button id="drawer-lang-he" type="button" class="px-3 py-1 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer">עברית</button>
-                        <button id="drawer-lang-en" type="button" class="px-3 py-1 rounded-full text-xs font-bold text-slate-400 cursor-pointer">English</button>
+                        <button id="drawer-lang-he" onclick="setLanguage('he')" type="button" class="px-3 py-1 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer">עברית</button>
+                        <button id="drawer-lang-en" onclick="setLanguage('en')" type="button" class="px-3 py-1 rounded-full text-xs font-bold text-slate-400 cursor-pointer">English</button>
                     </div>
 
-                    <button id="mobile-menu-close" type="button" aria-label="Close menu" class="p-2 text-slate-400 hover:text-white text-3xl font-bold cursor-pointer">
+                    <button id="mobile-menu-close" onclick="closeMobileMenu()" type="button" aria-label="Close menu" class="p-2 text-slate-400 hover:text-white text-3xl font-bold cursor-pointer">
                         &times;
                     </button>
                 </div>
 
                 <nav class="space-y-4 text-rtl-right">
-                    <a href="#about" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.about">אודות</a>
-                    <a href="#services" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.services">שירותים</a>
-                    <a href="#reviews" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.reviews">המלצות</a>
-                    <a href="#articles" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.articles">מדריכים</a>
-                    <a href="#contact" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan" data-i18n="nav.contact">צור קשר</a>
+                    <a href="#about" onclick="closeMobileMenu()" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.about">אודות</a>
+                    <a href="#services" onclick="closeMobileMenu()" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.services">שירותים</a>
+                    <a href="#reviews" onclick="closeMobileMenu()" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.reviews">המלצות</a>
+                    <a href="#articles" onclick="closeMobileMenu()" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan border-b border-slate-800/60" data-i18n="nav.articles">מדריכים</a>
+                    <a href="#contact" onclick="closeMobileMenu()" class="mobile-nav-link block py-3 text-xl font-bold text-slate-200 hover:text-physio-lightCyan" data-i18n="nav.contact">צור קשר</a>
                 </nav>
             </div>
 
@@ -264,7 +264,7 @@
 
             <!-- Trust Subline -->
             <p class="text-xs sm:text-sm text-physio-lightCyan font-semibold mb-8 tracking-wide opacity-95" data-i18n="hero.trustLine">
-                ד״ר דוד גרבר, PT, DPT | פיזיותרפיסט משנת 1997 | טיפול אישי אחד-על-אחד
+                ד'ר דוד גרבר, PT, DPT | פיזיותרפיסט משנת 1997 | טיפול אישי אחד-על-אחד
             </p>
 
             <!-- Call to Actions -->
@@ -293,7 +293,7 @@
 
     <!-- ========================================== -->
     <!-- SECTION 3: QUICK CONTACT & TRUST BAR      -->
-    <!-- (Perfected 1-on-1 Alignment & 50 Reviews)  -->
+    <!-- (51 Real Google Reviews & 1-on-1 Clean Fix)-->
     <!-- ========================================== -->
     <section id="quick-contact" class="py-8 bg-physio-navy border-y border-slate-800 relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -340,7 +340,7 @@
                         <span>★</span>
                     </div>
                     <div class="text-xs text-slate-300 group-hover:text-physio-lightCyan mt-1 font-semibold underline flex items-center justify-center gap-1" data-i18n="trust.s4">
-                        <span id="google-reviews-counter">50 ביקורות מאומתות בגוגל</span>
+                        <span id="google-reviews-counter">51 ביקורות מאומתות בגוגל</span>
                         <span class="text-[10px]">↗</span>
                     </div>
                 </a>
@@ -363,18 +363,18 @@
                         <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-2 border-physio-lightCyan/50 mx-auto shadow-2xl group">
                             <img src="./assets/images/dr-garber-portrait.jpg" alt="ד&quot;ר דוד גרבר - תמונת פנים" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        <h3 class="text-xl font-extrabold text-white mt-4" data-i18n="approach.docName">ד״ר דוד גרבר</h3>
+                        <h3 class="text-xl font-extrabold text-white mt-4" data-i18n="approach.docName">ד'ר דוד גרבר</h3>
                         <p class="text-xs text-physio-lightCyan font-semibold" data-i18n="approach.docRole">PT, DPT | פיזיותרפיסט מורשה</p>
                     </div>
 
                     <div class="md:col-span-8 space-y-4 text-rtl-right">
                         <span class="text-physio-lightCyan font-bold text-xs tracking-wider uppercase" data-i18n="approach.tag">אודות הקליניקה והגישה</span>
-                        <h2 class="text-2xl sm:text-3xl font-black text-white" data-i18n="approach.title">נעים להכיר, ד״ר דוד גרבר</h2>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white" data-i18n="approach.title">נעים להכיר, ד'ר דוד גרבר</h2>
                         <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="approach.text">
-                            ד״ר דוד גרבר הוא פיזיותרפיסט בעל הכשרה בינלאומית וניסיון קליני משנת 1997. גישתו משלבת טכניקות ידניות שעליהן נבנה הבסיס הקליני שלו בהולנד, לימודי Doctor of Physical Therapy בארצות הברית, ניסיון בשיקום ספורט, ביומכניקה, התאמת מדרסים והבנה מעמיקה של תנועה. כספורטאי בעצמו, הוא מכיר מקרוב את הדרישות הפיזיות והמנטליות של אימון, פציעה וחזרה לפעילות.
+                            ד'ר דוד גרבר הוא פיזיותרפיסט בעל הכשרה בינלאומית וניסיון קליני משנת 1997. גישתו משלבת טכניקות ידניות שעליהן נבנה הבסיס הקליני שלו בהולנד, לימודי Doctor of Physical Therapy בארצות הברית, ניסיון בשיקום ספורט, ביומכניקה, התאמת מדרסים והבנה מעמיקה של תנועה. כספורטאי בעצמו, הוא מכיר מקרוב את הדרישות הפיזיות והמנטליות של אימון, פציעה וחזרה לפעילות.
                         </p>
                         <div>
-                            <button type="button" class="open-journey-btn-trigger inline-flex items-center gap-2 bg-physio-cyan hover:bg-sky-600 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition-all cursor-pointer">
+                            <button type="button" onclick="openJourneyModal()" class="open-journey-btn-trigger inline-flex items-center gap-2 bg-physio-cyan hover:bg-sky-600 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition-all cursor-pointer">
                                 <span data-i18n="approach.btnJourney">המסע המקצועי מאחורי TherapySport</span>
                                 <span class="dir-arrow">←</span>
                             </button>
@@ -470,10 +470,10 @@
                         </div>
 
                         <!-- Intuitive Directional Carousel Controls -->
-                        <button id="gallery-prev-btn" type="button" aria-label="Previous Slide" class="absolute top-1/2 left-3 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all cursor-pointer shadow-lg z-20">
+                        <button id="gallery-prev-btn" onclick="prevGallery()" type="button" aria-label="Previous Slide" class="absolute top-1/2 left-3 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all cursor-pointer shadow-lg z-20">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
                         </button>
-                        <button id="gallery-next-btn" type="button" aria-label="Next Slide" class="absolute top-1/2 right-3 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all cursor-pointer shadow-lg z-20">
+                        <button id="gallery-next-btn" onclick="nextGallery()" type="button" aria-label="Next Slide" class="absolute top-1/2 right-3 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all cursor-pointer shadow-lg z-20">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </button>
 
@@ -499,7 +499,7 @@
                     </h2>
                     
                     <p class="text-base text-slate-300 leading-relaxed font-normal" data-i18n="about.desc">
-                        קליניקת TherapySport בזיכרון יעקב בהנהלת ד״ר דוד גרבר מציעה מענה מקיף ומקצועי לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני והתאמת מדרסים. הגישה הקלינית מתמקדת בהבנת הגורמים התורמים לפציעה ולא רק בסימפטומים, תוך ליווי אישי בגובה העיניים.
+                        קליניקת TherapySport בזיכרון יעקב בהנהלת ד'ר דוד גרבר מציעה מענה מקיף ומקצועי לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני והתאמת מדרסים. הגישה הקלינית מתמקדת בהבנת הגורמים התורמים לפציעה ולא רק בסימפטומים, תוך ליווי אישי בגובה העיניים.
                     </p>
 
                     <!-- Consolidated Therapeutic Modalities Box (6 Items) -->
@@ -548,7 +548,7 @@
     <!-- FULL STORY / JOURNEY MODAL -->
     <div id="journey-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
         <div class="glass-card max-w-3xl w-full max-h-[85vh] overflow-y-auto rounded-3xl p-6 sm:p-10 border border-slate-700 relative text-rtl-right">
-            <button id="close-journey-btn" type="button" class="absolute top-6 left-6 text-slate-400 hover:text-white text-2xl font-bold focus:outline-none cursor-pointer">&times;</button>
+            <button id="close-journey-btn" onclick="closeJourneyModal()" type="button" class="absolute top-6 left-6 text-slate-400 hover:text-white text-2xl font-bold focus:outline-none cursor-pointer">&times;</button>
             <span class="bg-physio-cyan/20 border border-physio-cyan/40 text-physio-lightCyan px-3 py-1 rounded-full text-xs font-bold inline-block mb-3" data-i18n="journey.badge">הרקע וההכשרה הקלינית</span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4" data-i18n="journey.title">המסע המקצועי מאחורי TherapySport</h2>
             
@@ -557,7 +557,7 @@
             </div>
 
             <div class="mt-8 pt-4 border-t border-slate-800 flex justify-end">
-                <button id="close-journey-btn-bottom" type="button" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2.5 rounded-xl text-sm font-bold cursor-pointer" data-i18n="journey.close">סגור</button>
+                <button id="close-journey-btn-bottom" onclick="closeJourneyModal()" type="button" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2.5 rounded-xl text-sm font-bold cursor-pointer" data-i18n="journey.close">סגור</button>
             </div>
         </div>
     </div>
@@ -577,22 +577,22 @@
 
             <!-- Responsive Flex-Wrap Tabs Container -->
             <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8 w-full" role="tablist" aria-label="Services & Pain Areas">
-                <button type="button" data-pain="knee" id="pain-tab-knee" role="tab" aria-selected="true" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-physio-cyan text-white shadow-md cursor-pointer">
+                <button type="button" onclick="selectPainArea('knee')" data-pain="knee" id="pain-tab-knee" role="tab" aria-selected="true" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-physio-cyan text-white shadow-md cursor-pointer">
                     🦵 <span data-i18n="pain.knee">ברך</span>
                 </button>
-                <button type="button" data-pain="back" id="pain-tab-back" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
+                <button type="button" onclick="selectPainArea('back')" data-pain="back" id="pain-tab-back" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
                     🪵 <span data-i18n="pain.back">גב ועמוד שדרה</span>
                 </button>
-                <button type="button" data-pain="shoulder" id="pain-tab-shoulder" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
+                <button type="button" onclick="selectPainArea('shoulder')" data-pain="shoulder" id="pain-tab-shoulder" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
                     🦾 <span data-i18n="pain.shoulder">כתף וצוואר</span>
                 </button>
-                <button type="button" data-pain="ankle" id="pain-tab-ankle" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
+                <button type="button" onclick="selectPainArea('ankle')" data-pain="ankle" id="pain-tab-ankle" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
                     👟 <span data-i18n="pain.ankle">כף רגל ואכילס</span>
                 </button>
-                <button type="button" data-pain="hip" id="pain-tab-hip" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
+                <button type="button" onclick="selectPainArea('hip')" data-pain="hip" id="pain-tab-hip" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
                     🦴 <span data-i18n="pain.hip">ירך ואגן</span>
                 </button>
-                <button type="button" data-pain="sports" id="pain-tab-sports" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
+                <button type="button" onclick="selectPainArea('sports')" data-pain="sports" id="pain-tab-sports" role="tab" aria-selected="false" class="pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer">
                     🏃‍♂️ <span data-i18n="pain.sports">פציעות ספורט ורכיבה</span>
                 </button>
             </div>
@@ -720,7 +720,7 @@
 
     <!-- ========================================== -->
     <!-- SECTION 8: WHAT OUR PATIENTS SAY (REVIEWS) -->
-    <!-- Real Google Business Reviews (50 Reviews)  -->
+    <!-- 51 Real Google Business Profile Reviews    -->
     <!-- ========================================== -->
     <section id="reviews" class="py-20 relative bg-physio-darkNavy border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -728,15 +728,15 @@
             <div class="text-center max-w-3xl mx-auto mb-10">
                 <a href="https://www.google.com/maps/search/?api=1&query=Dr.+David+Garber+TherapySport+physiotherapy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 px-5 py-2.5 rounded-full mb-3 border border-amber-500/30 transition-all hover:scale-105 cursor-pointer shadow-xl group" title="Google Reviews">
                     <span class="text-amber-400 font-black text-base">5.0 ★★★★★</span>
-                    <span class="text-slate-200 text-xs font-bold group-hover:text-physio-lightCyan" data-i18n="reviews.googleScore">50 ביקורות מאומתות בגוגל ↗</span>
+                    <span class="text-slate-200 text-xs font-bold group-hover:text-physio-lightCyan" data-i18n="reviews.googleScore">51 ביקורות מאומתות בגוגל ↗</span>
                 </a>
                 <h2 class="text-3xl sm:text-4xl font-black text-white" data-i18n="reviews.title">מה המטופלים שלנו אומרים</h2>
-                <p class="text-slate-400 mt-2 text-sm sm:text-base" data-i18n="reviews.subtitle">חוויות טיפול וביקורות אותנטיות שנכתבו על ד״ר דוד גרבר ב-Google Maps.</p>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base" data-i18n="reviews.subtitle">חוויות טיפול וביקורות אותנטיות שנכתבו על ד'ר דוד גרבר ב-Google Maps.</p>
 
                 <div class="mt-3">
                     <a href="https://www.google.com/maps/search/?api=1&query=Dr.+David+Garber+TherapySport+physiotherapy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-physio-lightCyan hover:text-white text-xs font-extrabold transition-all">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C6.721,2,2,6.721,2,12.545s4.721,10.545,10.545,10.545c6.156,0,10.256-4.332,10.256-10.435c0-0.702-0.076-1.388-0.198-2.046H12.545z"/></svg>
-                        <span data-i18n="reviews.viewAllGoogle">לצפייה ב-50 הביקורות בזמן אמת ב-Google Maps</span>
+                        <span data-i18n="reviews.viewAllGoogle">לצפייה ב-51 הביקורות בזמן אמת ב-Google Maps</span>
                         <span>↗</span>
                     </a>
                 </div>
@@ -749,13 +749,13 @@
                     <div>
                         <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
                             <div>
-                                <h4 id="review-author" class="font-extrabold text-white text-base">רועי תמיר</h4>
-                                <span id="review-role" class="text-xs text-physio-lightCyan">רוכב אופניים ושיקום ברך</span>
+                                <h4 id="review-author" class="font-extrabold text-white text-base">עמיחי נבון</h4>
+                                <span id="review-role" class="text-xs text-physio-lightCyan">שיקום כתף וליווי אישי</span>
                             </div>
                             <div class="text-amber-400 text-sm font-bold">5.0 ★★★★★</div>
                         </div>
                         <p id="review-text" class="text-slate-200 text-sm sm:text-base leading-relaxed italic">
-                            "ד"ר דוד גרבר פיזיותרפיסט מדהים ומקצוען ברמות הגבוהות ביותר! הגעתי אליו עם פציעת ברך מורכבת מרכיבת אופניים. האבחון הביומכני והתאמת המדרסים פתרו לי את הבעיה מהשורש. יחס אישי מדהים וקליניקה ברמה הגבוהה ביותר בזיכרון יעקב!"
+                            "ברצוני להמליץ מכל הלב על הפיזיותרפיסט דויד, שמטפל בי במסירות, מקצועיות ודיוק מרשים. לאחרונה טיפל גם באשתי, שסבלה מפציעת כתף קשה והייתה כבר על סף ניתוח. בזכות הטיפול של דויד – יסודי, מותאם אישית ועיקר אנושי – היא חזרה לתפקוד מלא, ללא צורך בניתוח כלל. דויד הוא איש מקצוע ברמה הגבוהה ביותר."
                         </p>
                     </div>
                     <div class="flex items-center justify-between text-[11px] text-slate-400 mt-4 border-t border-slate-800/60 pt-3">
@@ -763,13 +763,13 @@
                             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                             ביקורת מאומתת ב-Google Maps
                         </span>
-                        <span id="review-tag" class="text-slate-400">Google Review</span>
+                        <span id="review-tag" class="text-slate-400">Google Verified Review</span>
                     </div>
                 </div>
 
                 <!-- Carousel Controls -->
                 <div class="flex items-center justify-between mt-6">
-                    <button id="review-prev-btn" type="button" aria-label="Review Previous" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all shadow-md cursor-pointer text-lg font-bold">
+                    <button id="review-prev-btn" onclick="prevReview()" type="button" aria-label="Review Previous" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all shadow-md cursor-pointer text-lg font-bold">
                         <span id="prev-arrow-symbol">→</span>
                     </button>
 
@@ -781,7 +781,7 @@
                         <span data-review-dot="4" class="w-3.5 h-3.5 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer transition-all"></span>
                     </div>
 
-                    <button id="review-next-btn" type="button" aria-label="Review Next" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all shadow-md cursor-pointer text-lg font-bold">
+                    <button id="review-next-btn" onclick="nextReview()" type="button" aria-label="Review Next" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 text-white flex items-center justify-center hover:bg-physio-cyan transition-all shadow-md cursor-pointer text-lg font-bold">
                         <span id="next-arrow-symbol">←</span>
                     </button>
                 </div>
@@ -800,14 +800,14 @@
             <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="text-physio-lightCyan font-bold text-xs tracking-wider uppercase" data-i18n="articles.tag">מידע והדרכות</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-white mt-2" data-i18n="articles.title">הדרכות קליניות וסרטוני טיפול</h2>
-                <p class="text-slate-400 mt-3 text-sm sm:text-base" data-i18n="articles.subtitle">מדריכים מעשיים וסרטוני תרגול מפי ד"ר דוד גרבר (בקרוב יתווספו סרטוני וידאו).</p>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base" data-i18n="articles.subtitle">מדריכים מעשיים וסרטוני תרגול מפי ד'ר דוד גרבר (בקרוב יתווספו סרטוני וידאו).</p>
             </div>
 
             <!-- 3 Video/Guide Hub Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- Guide Card 1 -->
-                <div data-article-id="1" class="article-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-slate-700/70 group cursor-pointer text-rtl-right">
+                <div data-article-id="1" onclick="openArticleModal(1)" class="article-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-slate-700/70 group cursor-pointer text-rtl-right">
                     <div>
                         <div class="h-48 overflow-hidden relative">
                             <img src="./assets/images/clinic-treatment-4.jpg" alt="מדרסים ביומכניים" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -823,8 +823,8 @@
                         </div>
                     </div>
                     <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-[11px] text-slate-400" data-i18n="art.author">ד"ר דוד גרבר</span>
-                        <button type="button" data-article-id="1" class="read-article-btn text-physio-lightCyan hover:text-white font-bold text-xs flex items-center gap-1 cursor-pointer">
+                        <span class="text-[11px] text-slate-400" data-i18n="art.author">ד'ר דוד גרבר</span>
+                        <button type="button" onclick="openArticleModal(1)" data-article-id="1" class="read-article-btn text-physio-lightCyan hover:text-white font-bold text-xs flex items-center gap-1 cursor-pointer">
                             <span data-i18n="art.read">צפייה בהדרכה</span>
                             <span class="dir-arrow">←</span>
                         </button>
@@ -832,7 +832,7 @@
                 </div>
 
                 <!-- Guide Card 2 -->
-                <div data-article-id="2" class="article-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-slate-700/70 group cursor-pointer text-rtl-right">
+                <div data-article-id="2" onclick="openArticleModal(2)" class="article-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-slate-700/70 group cursor-pointer text-rtl-right">
                     <div>
                         <div class="h-48 overflow-hidden relative">
                             <img src="./assets/images/clinic-treatment-2.jpg" alt="כאבי ברכיים" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -848,8 +848,8 @@
                         </div>
                     </div>
                     <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-[11px] text-slate-400" data-i18n="art.author">ד"ר דוד גרבר</span>
-                        <button type="button" data-article-id="2" class="read-article-btn text-physio-lightCyan hover:text-white font-bold text-xs flex items-center gap-1 cursor-pointer">
+                        <span class="text-[11px] text-slate-400" data-i18n="art.author">ד'ר דוד גרבר</span>
+                        <button type="button" onclick="openArticleModal(2)" data-article-id="2" class="read-article-btn text-physio-lightCyan hover:text-white font-bold text-xs flex items-center gap-1 cursor-pointer">
                             <span data-i18n="art.read">צפייה בהדרכה</span>
                             <span class="dir-arrow">←</span>
                         </button>
@@ -857,7 +857,7 @@
                 </div>
 
                 <!-- Guide Card 3 -->
-                <div data-article-id="3" class="article-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-slate-700/70 group cursor-pointer text-rtl-right">
+                <div data-article-id="3" onclick="openArticleModal(3)" class="article-card glass-card glass-card-hover rounded-3xl overflow-hidden flex flex-col justify-between border-slate-700/70 group cursor-pointer text-rtl-right">
                     <div>
                         <div class="h-48 overflow-hidden relative">
                             <img src="./assets/images/clinic-treatment-3.jpg" alt="פציעות גיד" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -873,8 +873,8 @@
                         </div>
                     </div>
                     <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
-                        <span class="text-[11px] text-slate-400" data-i18n="art.author">ד"ר דוד גרבר</span>
-                        <button type="button" data-article-id="3" class="read-article-btn text-physio-lightCyan hover:text-white font-bold text-xs flex items-center gap-1 cursor-pointer">
+                        <span class="text-[11px] text-slate-400" data-i18n="art.author">ד'ר דוד גרבר</span>
+                        <button type="button" onclick="openArticleModal(3)" data-article-id="3" class="read-article-btn text-physio-lightCyan hover:text-white font-bold text-xs flex items-center gap-1 cursor-pointer">
                             <span data-i18n="art.read">צפייה בהדרכה</span>
                             <span class="dir-arrow">←</span>
                         </button>
@@ -888,14 +888,14 @@
     <!-- ARTICLE / GUIDE READING MODAL DIALOG -->
     <div id="article-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 text-rtl-right">
         <div class="glass-card max-w-3xl w-full max-h-[85vh] overflow-y-auto rounded-3xl p-6 sm:p-10 border border-slate-700 relative">
-            <button id="close-article-btn" type="button" class="absolute top-6 left-6 text-slate-400 hover:text-white text-2xl font-bold focus:outline-none cursor-pointer">&times;</button>
+            <button id="close-article-btn" onclick="closeArticleModal()" type="button" class="absolute top-6 left-6 text-slate-400 hover:text-white text-2xl font-bold focus:outline-none cursor-pointer">&times;</button>
             <span id="modal-article-tag" class="bg-physio-cyan/20 border border-physio-cyan/40 text-physio-lightCyan px-3 py-1 rounded-full text-xs font-bold inline-block mb-3">מדריך קליני</span>
             <h2 id="modal-article-title" class="text-2xl sm:text-3xl font-extrabold text-white mb-4">כותרת מדריך</h2>
             <div id="modal-article-body" class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
                 <!-- Populated dynamically via JS -->
             </div>
             <div class="mt-8 pt-4 border-t border-slate-800 flex justify-end">
-                <button id="close-article-btn-bottom" type="button" class="bg-slate-800 text-white px-6 py-2.5 rounded-xl text-sm font-bold cursor-pointer" data-i18n="art.closeModal">סגור מדריך</button>
+                <button id="close-article-btn-bottom" onclick="closeArticleModal()" type="button" class="bg-slate-800 text-white px-6 py-2.5 rounded-xl text-sm font-bold cursor-pointer" data-i18n="art.closeModal">סגור מדריך</button>
             </div>
         </div>
     </div>
@@ -911,7 +911,7 @@
                 <span class="text-physio-lightCyan font-bold text-xs tracking-wider uppercase" data-i18n="contact.tag">יצירת קשר ותיאום פנייה</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-white mt-1" data-i18n="contact.title">מתחילים באבחון מדויק</h2>
                 <p class="text-slate-300 mt-3 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed" data-i18n="contact.subtitle">
-                    פנייה ישירה ומהירה מתבצעת ישירות ב-WhatsApp או בשיחת טלפון. ד״ר דוד גרבר יענה לכם בהקדם לבדיקת התאמה לטיפול בקליניקה.
+                    פנייה ישירה ומהירה מתבצעת ישירות ב-WhatsApp או בשיחת טלפון. ד'ר דוד גרבר יענה לכם בהקדם לבדיקת התאמה לטיפול בקליניקה.
                 </p>
 
                 <!-- Big Direct Action Buttons -->
@@ -972,7 +972,7 @@
                         <span class="text-base font-bold text-white">TherapySport</span>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed" data-i18n="footer.aboutText">
-                        קליניקה מומחית לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני ומדרסים בהנהלת ד"ר דוד גרבר (PT, DPT) בזיכרון יעקב.
+                        קליניקה מומחית לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני ומדרסים בהנהלת ד'ר דוד גרבר (PT, DPT) בזיכרון יעקב.
                     </p>
                 </div>
 
@@ -1034,7 +1034,7 @@
                 "hero.badge": "פיזיותרפיית ספורט, שיקום אורתופדי וביומכניקה בזיכרון יעקב",
                 "hero.title": "חוזרים לנוע.<br/><span class=\"bg-gradient-to-r from-physio-lightCyan via-sky-300 to-emerald-400 bg-clip-text text-transparent\">חוזרים לפעילות.</span>",
                 "hero.subtitle": "טיפול אישי המשלב פיזיותרפיה מבוססת ראיות, אבחון תנועה, טכניקות ידניות, שיקום ספורטיבי ומדרסים בהתאמה אישית.",
-                "hero.trustLine": "ד״ר דוד גרבר, PT, DPT | פיזיותרפיסט משנת 1997 | טיפול אישי אחד-על-אחד",
+                "hero.trustLine": "ד'ר דוד גרבר, PT, DPT | פיזיותרפיסט משנת 1997 | טיפול אישי אחד-על-אחד",
                 "hero.ctaPrimary": "תיאום אבחון ראשוני",
                 "hero.ctaSecondary": "הגישה של TherapySport",
                 "quick.wa": "פנייה ישירה ב-WhatsApp",
@@ -1044,10 +1044,10 @@
                 "trust.s1": "טיפול אישי ממוקד",
                 "trust.s2": "פיזיותרפיסט משנת 1997",
                 "trust.s3": "Doctor of Physical Therapy",
-                "trust.s4": "50 ביקורות מאומתות בגוגל ↗",
+                "trust.s4": "51 ביקורות מאומתות בגוגל ↗",
                 "about.tag": "הכירו את TherapySport",
                 "about.title": "פיזיותרפיה מקצועית",
-                "about.desc": "קליניקת TherapySport בזיכרון יעקב בהנהלת ד״ר דוד גרבר מציעה מענה מקיף ומקצועי לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני והתאמת מדרסים. הגישה הקלינית מתמקדת בהבנת הגורמים התורמים לפציעה ולא רק בסימפטומים, תוך ליווי אישי בגובה העיניים.",
+                "about.desc": "קליניקת TherapySport בזיכרון יעקב בהנהלת ד'ר דוד גרבר מציעה מענה מקיף ומקצועי לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני והתאמת מדרסים. הגישה הקלינית מתמקדת בהבנת הגורמים התורמים לפציעה ולא רק בסימפטומים, תוך ליווי אישי בגובה העיניים.",
                 "gallery.s1Badge": "אבחון ביומכני",
                 "gallery.s1Title": "אבחון תנועה וביומכניקה",
                 "gallery.s1Desc": "איתור וזיהוי מוקדי העומס והגורמים התורמים לפציעה",
@@ -1088,24 +1088,24 @@
                 "pain.sports": "פציעות ספורט ורכיבה",
                 "pain.badge": "✓ הערכה ושיקום מותאם",
                 "approach.tag": "אודות הקליניקה והגישה",
-                "approach.title": "נעים להכיר, ד״ר דוד גרבר",
-                "approach.text": "ד״ר דוד גרבר הוא פיזיותרפיסט בעל הכשרה בינלאומית וניסיון קליני משנת 1997. גישתו משלבת טכניקות ידניות שעליהן נבנה הבסיס הקליני שלו בהולנד, לימודי Doctor of Physical Therapy בארצות הברית, ניסיון בשיקום ספורט, ביומכניקה, התאמת מדרסים והבנה מעמיקה של תנועה. כספורטאי בעצמו, הוא מכיר מקרוב את הדרישות הפיזיות והמנטליות של אימון, פציעה וחזרה לפעילות.",
-                "approach.docName": "ד״ר דוד גרבר",
+                "approach.title": "נעים להכיר, ד'ר דוד גרבר",
+                "approach.text": "ד'ר דוד גרבר הוא פיזיותרפיסט בעל הכשרה בינלאומית וניסיון קליני משנת 1997. גישתו משלבת טכניקות ידניות שעליהן נבנה הבסיס הקליני שלו בהולנד, לימודי Doctor of Physical Therapy בארצות הברית, ניסיון בשיקום ספורט, ביומכניקה, התאמת מדרסים והבנה מעמיקה של תנועה. כספורטאי בעצמו, הוא מכיר מקרוב את הדרישות הפיזיות והמנטליות של אימון, פציעה וחזרה לפעילות.",
+                "approach.docName": "ד'ר דוד גרבר",
                 "approach.docRole": "PT, DPT | פיזיותרפיסט מורשה",
                 "approach.btnJourney": "המסע המקצועי מאחורי TherapySport",
                 "journey.badge": "הרקע וההכשרה הקלינית",
                 "journey.title": "המסע המקצועי מאחורי TherapySport",
                 "journey.close": "סגור",
-                "reviews.googleScore": "50 ביקורות מאומתות בגוגל ↗",
+                "reviews.googleScore": "51 ביקורות מאומתות בגוגל ↗",
                 "reviews.title": "מה המטופלים שלנו אומרים",
-                "reviews.subtitle": "חוויות טיפול וביקורות אותנטיות שנכתבו על ד״ר דוד גרבר ב-Google Maps.",
-                "reviews.viewAllGoogle": "לצפייה ב-50 הביקורות בזמן אמת ב-Google Maps",
+                "reviews.subtitle": "חוויות טיפול וביקורות אותנטיות שנכתבו על ד'ר דוד גרבר ב-Google Maps.",
+                "reviews.viewAllGoogle": "לצפייה ב-51 הביקורות בזמן אמת ב-Google Maps",
                 "ig.title": "הצטרפו אלינו באינסטגרם",
                 "ig.subtitle": "טיפים קליניים יומיים, תרגילי שיקום והצצה אל מאחורי הקלעים בקליניקה.",
                 "ig.btnFollow": "עקבו באינסטגרם @david_garberpt",
                 "articles.tag": "מידע והדרכות",
                 "articles.title": "הדרכות קליניות וסרטוני טיפול",
-                "articles.subtitle": "מדריכים מעשיים וסרטוני תרגול מפי ד"ר דוד גרבר (בקרוב יתווספו סרטוני וידאו).",
+                "articles.subtitle": "מדריכים מעשיים וסרטוני תרגול מפי ד'ר דוד גרבר (בקרוב יתווספו סרטוני וידאו).",
                 "art.videoBadge": "🎥 סרטון הדרכה בקרוב",
                 "art.1Tag": "מדרסים ודריכה",
                 "art.1Meta": "מדריך קליני • 4 דקות קריאה",
@@ -1119,12 +1119,12 @@
                 "art.3Meta": "מדריך קליני • 6 דקות קריאה",
                 "art.3Title": "חזרה לפעילות לאחר פציעת גיד",
                 "art.3Desc": "עקרונות השיקום הטרנדיני ואמידה נכונה של עומסים הדרגתיים למניעת נסיגה.",
-                "art.author": "ד"ר דוד גרבר",
+                "art.author": "ד'ר דוד גרבר",
                 "art.read": "צפייה בהדרכה",
                 "art.closeModal": "סגור מדריך",
                 "contact.tag": "יצירת קשר ותיאום פנייה",
                 "contact.title": "מתחילים באבחון מדויק",
-                "contact.subtitle": "פנייה ישירה ומהירה מתבצעת ישירות ב-WhatsApp או בשיחת טלפון. ד״ר דוד גרבר יענה לכם בהקדם.",
+                "contact.subtitle": "פנייה ישירה ומהירה מתבצעת ישירות ב-WhatsApp או בשיחת טלפון. ד'ר דוד גרבר יענה לכם בהקדם.",
                 "contact.btnWa": "שליחת הודעה ב-WhatsApp",
                 "contact.btnPhone": "חיוג: 052-3630709",
                 "contact.addrTitle": "כתובת הקליניקה",
@@ -1133,7 +1133,7 @@
                 "contact.hoursHeader": "שעות קבלת קהל:",
                 "contact.hoursDays": "ימים א'-ה': 07:00 - 19:00",
                 "contact.hoursFri": "יום ו': 07:00 - 13:00 (בתאום מראש)",
-                "footer.aboutText": "קליניקה מומחית לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני ומדרסים בהנהלת ד"ר דוד גרבר (PT, DPT) בזיכרון יעקב.",
+                "footer.aboutText": "קליניקה מומחית לפיזיותרפיית ספורט, שיקום אורתופדי, אבחון ביומכני ומדרסים בהנהלת ד'ר דוד גרבר (PT, DPT) בזיכרון יעקב.",
                 "footer.quickLinks": "קישורים מהירים",
                 "footer.contactTitle": "פרטי התקשרות",
                 "footer.addrLabel": "כתובת:",
@@ -1165,7 +1165,7 @@
                 "trust.s1": "Personal Focused Care",
                 "trust.s2": "Physical Therapist since 1997",
                 "trust.s3": "Doctor of Physical Therapy",
-                "trust.s4": "50 Verified Google Reviews ↗",
+                "trust.s4": "51 Verified Google Reviews ↗",
                 "about.tag": "Meet TherapySport",
                 "about.title": "Professional Physical Therapy",
                 "about.desc": "TherapySport clinic in Zichron Yaakov, led by Dr. David Garber (PT, DPT), offers comprehensive care for sports injuries, orthopedic rehabilitation, biomechanical assessment, and custom insoles.",
@@ -1217,10 +1217,10 @@
                 "journey.badge": "Background & Qualifications",
                 "journey.title": "The Journey Behind TherapySport",
                 "journey.close": "Close",
-                "reviews.googleScore": "50 Verified Google Reviews ↗",
+                "reviews.googleScore": "51 Verified Google Reviews ↗",
                 "reviews.title": "What Our Patients Say",
-                "reviews.subtitle": "Authentic patient experiences and verified Google Maps reviews for Dr. David Garber.",
-                "reviews.viewAllGoogle": "View all 50 live reviews on Google Maps",
+                "reviews.subtitle": "Authentic patient experiences and 51 verified Google Maps reviews for Dr. David Garber.",
+                "reviews.viewAllGoogle": "View all 51 live reviews on Google Maps",
                 "ig.title": "Follow Us on Instagram",
                 "ig.subtitle": "Daily clinical tips, rehabilitation exercises, and behind-the-scenes at TherapySport.",
                 "ig.btnFollow": "Follow on Instagram @david_garberpt",
@@ -1268,70 +1268,70 @@
         };
 
         /**
-         * REAL AUTHENTIC GOOGLE MAPS REVIEWS (50 GOOGLE REVIEWS PROFILE)
+         * REAL AUTHENTIC GOOGLE MAPS REVIEWS (EXACT CLIENT REVIEWS FROM GOOGLE PROFILE)
          */
         const reviewsData = {
             he: [
                 {
-                    author: "רועי תמיר",
-                    role: "רוכב אופניים ושיקום ברך",
-                    quote: "\"ד\"ר דוד גרבר פיזיותרפיסט מדהים ומקצוען ברמות הגבוהות ביותר! הגעתי אליו עם פציעת ברך מורכבת מרכיבת אופניים. האבחון הביומכני והתאמת המדרסים פתרו לי את הבעיה מהשורש. יחס אישי מדהים וקליניקה ברמה הגבוהה ביותר בזיכרון יעקב!\"",
+                    author: "עמיחי נבון",
+                    role: "שיקום כתף וליווי אישי",
+                    quote: "\"ברצוני להמליץ מכל הלב על הפיזיותרפיסט דויד, שמטפל בי במסירות, מקצועיות ודיוק מרשים. לאחרונה טיפל גם באשתי, שסבלה מפציעת כתף קשה והייתה כבר על סף ניתוח. בזכות הטיפול של דויד – יסודי, מותאם אישית ועיקר אנושי – היא חזרה לתפקוד מלא, ללא צורך בניתוח כלל. דויד הוא איש מקצוע ברמה הגבוהה ביותר.\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "אביב כהן",
-                    role: "שיקום גיד אכילס וטיפול 1-על-1",
-                    quote: "\"טיפול פיזיותרפיה מקצועי, יסודי ואישי אחד-על-אחד. דוד מאבחן בדיוק רב את מקור הבעיה ולא מטפל רק בסימפטומים. השיקום באכילס עזר לי לחזור לרוץ בצורה בטוחה. ממליץ בחום!\"",
+                    author: "zivfro",
+                    role: "שיקום ברך לאחר שבר מורכב",
+                    quote: "\"מאוד מומלץ. מהרגע הראשון במכון יש תחושה שאתה בידיים טובות וסופר מקצועיות. לאחר שבר מורכב בברך ועם יכולת להשוות לטיפולי פיזיוטרפיה במכונים נוספים אני יכול להגיד בבטחה שאת ההתקדמות הגדולה ביותר עשיתי אצל דייויד\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "מיכל לוי",
-                    role: "שיקום פריצת דיסק וגב תחתון",
-                    quote: "\"הגעתי לדוד עם כאבי גב תחתון ופריצת דיסק ששיתקו אותי. הטיפול המנואלי ההולנדי והתרגילים המותאמים אישית החזירו אותי לתפקוד מלא ולחיים ללא כאב. אין דברים כאלה!\"",
+                    author: "עידו לוין",
+                    role: "שיקום רצועה צולבת ומדרסים",
+                    quote: "\"שירות אדיב ומקצועי ביותר, דייוייד מדהים עם המון סבלנות. תמיד דואג גם מעבר לשעות הטיפול לראות שהכל תקין. באתי אליו אחרי קרע ברצועה הצולבת ובזכותו חזרתי לפעילות גופנית מלאה. בנוסף עשיתי אצלו מדרסים וקיבלתי חווית שירות מעולה. ממליץ בחום!\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "עופר דגן",
-                    role: "רוכב כביש ו-Bike Fit",
-                    quote: "\"אבחון Bike Fit וכיוון קליטים הכי מקצועי שנתקלתי בו. דוד פתר לי כאבי ברכיים מציקים ברכיבות נפח ארוכות. מומחה אמיתי בספורט וביומכניקה.\"",
+                    author: "Dalit Leader",
+                    role: "שיקום וליווי מקצועי",
+                    quote: "\"מומלץ ביותר. מילים אלו מסכמות את תחושת שביעות הרצון שלי. דייויד קשוב ביותר ופועל בהתאם באופן מקצועי ורגיש. השיפור היה מהיר וניכר שהוא ממשיך. תודה זכיתי\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "רוני אלון",
-                    role: "שיקום כתף ופציעות ספורט",
-                    quote: "\"דוד הוא פיזיותרפיסט בחסד עליון! מקשיב, מסביר כל שלב בטיפול, והכי חשוב - תוצאות מהירות ומדויקות. הקליניקה הכי טובה באזור.\"",
+                    author: "charlie turen",
+                    role: "פיזיותרפיית ספורט",
+                    quote: "\"חוויית הפיזיו הכי טובה שהייתה לי. מדובר במקצוען במלוא מובן המילה שגם נותן תחושה של מרחב בטוח. תודה!\"",
                     tag: "Google Verified Review"
                 }
             ],
             en: [
                 {
-                    author: "Roey Tamir",
-                    role: "Cyclist & Knee Rehab",
-                    quote: "\"Dr. David Garber is an incredible, top-tier physical therapist! I came with a complex cycling knee injury. The biomechanical evaluation and custom insoles solved the root cause. Outstanding personal care in Zichron Yaakov!\"",
+                    author: "Amichai Navon",
+                    role: "Shoulder Rehab & Personal Care",
+                    quote: "\"I want to wholeheartedly recommend David the physical therapist, who treats me with dedication, professionalism, and impressive accuracy. He recently treated my wife, who suffered a severe shoulder injury and was on the verge of surgery. Thanks to David's thorough, customized, and above all humane treatment, she returned to full function with no need for surgery. David is a top-level professional.\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "Aviv Cohen",
-                    role: "Achilles Rehab & 1-on-1 Care",
-                    quote: "\"Professional, thorough 1-on-1 physical therapy. David accurately diagnoses the root cause rather than just treating symptoms. My Achilles rehab got me running safely again!\"",
+                    author: "zivfro",
+                    role: "Knee Rehab & Complex Fracture",
+                    quote: "\"Highly recommended. From the first moment at the clinic, you feel you are in good and super-professional hands. After a complex knee fracture and having compared to other physical therapy clinics, I can safely say I made the greatest progress with David.\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "Michal Levi",
-                    role: "Disc Herniation & Lumbar Rehab",
-                    quote: "\"I came to David with debilitating lower back pain and disc herniation. His Dutch manual therapy and custom exercise plan restored me to full function pain-free. Outstanding!\"",
+                    author: "Ido Levin",
+                    role: "ACL Rehab & Custom Insoles",
+                    quote: "\"Kind and extremely professional service, David is amazing with a lot of patience. He always checks in outside of treatment hours to see that everything is okay. I came to him after an ACL tear and thanks to him I returned to full physical activity. I also recently got custom insoles from him and had a great experience. Highly recommend!\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "Ofer Dagan",
-                    role: "Road Cyclist & Bike Fit",
-                    quote: "\"The most professional Bike Fit and cleat alignment I have ever experienced. Solved persistent knee pain on long distance rides. True expert in sports biomechanics.\"",
+                    author: "Dalit Leader",
+                    role: "Professional Rehab & Care",
+                    quote: "\"Highly recommended. These words summarize my satisfaction. David is highly attentive and acts professionally and sensitively. The improvement was rapid and it is clear that it continues. Thank you, I was lucky.\"",
                     tag: "Google Verified Review"
                 },
                 {
-                    author: "Roni Alon",
-                    role: "Shoulder & Sports Injury Rehab",
-                    quote: "\"David is a gifted physical therapist! Attentive, explains every step, and most importantly delivers fast, precise results. Best clinic in the area.\"",
+                    author: "charlie turen",
+                    role: "Sports Physical Therapy",
+                    quote: "\"The best physical therapy experience I've ever had. A true professional in every sense of the word who also makes you feel in a safe space. Thank you!\"",
                     tag: "Google Verified Review"
                 }
             ]
@@ -1440,7 +1440,7 @@
                     tag: "מדרסים ודריכה",
                     title: "מתי מדרסים ביומכניים יכולים לעזור?",
                     body: `
-                        <p class="font-semibold text-white">מאת ד"ר דוד גרבר (PT, DPT)</p>
+                        <p class="font-semibold text-white">מאת ד'ר דוד גרבר (PT, DPT)</p>
                         <p>כפות הרגליים הן היסוד עליו נשען כל משקל הגוף בתנועה. בעת הליכה, ריצה או עמידה ממושכת, עומסים בלתי מאוזנים בכף הרגל עלולים להקרין מעלה אל הקרסול, הברך, הירך והגב התחתון.</p>
                         <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 my-2">
                             <strong class="text-white block mb-1">מתי מומלץ לשקול אבחון מדרסים?</strong>
@@ -1458,7 +1458,7 @@
                     tag: "פציעות ספורט",
                     title: "כאבי ברכיים בריצה וברכיבה – זיהוי גורמים תורמים",
                     body: `
-                        <p class="font-semibold text-white">מאת ד"ר דוד גרבר (PT, DPT)</p>
+                        <p class="font-semibold text-white">מאת ד'ר דוד גרבר (PT, DPT)</p>
                         <p>כאבי ברכיים הם מהתלונות הנפוצות ביותר בקרב רצים ורוכבי אופניים. לרוב לא מדובר בנזק מבני אקוטי, אלא ברגישות רקמתית הנגרמת משילוב של גורמים ביומכניים ועומסי אימון.</p>
                         <p><strong>ברכיבה:</strong> מנח כיסא נמוך מדי, זווית קליטים לא מדויקת או מרחק לא מותאם מהכידון עלולים להגביר את הלחץ על פיקת הברך (Patellofemoral Joint).</p>
                         <p><strong>בריצה:</strong> עלייה חדה בקושי המסלול או במרחק, יחד עם חולשה במייצבי האגן והירך, עלולה להוביל לתסמונת ITB או רגישות בגיד הפיקה.</p>
@@ -1469,7 +1469,7 @@
                     tag: "שיקום גידים",
                     title: "עקרונות חזרה לפעילות לאחר פציעת גיד (Tendinopathy)",
                     body: `
-                        <p class="font-semibold text-white">מאת ד"ר דוד גרבר (PT, DPT)</p>
+                        <p class="font-semibold text-white">מאת ד'ר דוד גרבר (PT, DPT)</p>
                         <p>שיקום גידים (כגון גיד אכילס, גיד הפיקה או גידי הכתף) דורש סבלנות והבנה של פיזיולוגיית הרקמה. גידים אינם מגיבים היטב למנוחה מוחלטת מחד, או להעמסה פתאומית מאידך.</p>
                         <div class="space-y-2 pt-1 text-xs sm:text-sm">
                             <p><strong>1. שלב הרגעת הכאב:</strong> תרגול איזומטרי מבוקר להורדת רגישות הרקמה ללא גירוי יתר.</p>
@@ -1525,18 +1525,18 @@
             }
         };
 
-        // State variables
-        let currentLang = 'he';
-        let activePainKey = 'knee';
-        let currentReviewIndex = 0;
-        let currentGalleryIndex = 0;
-        const totalReviews = 5;
-        const totalGallerySlides = 7;
+        // Global State variables
+        window.currentLang = 'he';
+        window.activePainKey = 'knee';
+        window.currentReviewIndex = 0;
+        window.currentGalleryIndex = 0;
+        window.totalReviews = 5;
+        window.totalGallerySlides = 7;
 
         // Set Language Function
-        function setLanguage(lang) {
+        window.setLanguage = function(lang) {
             if (!siteContent[lang]) return;
-            currentLang = lang;
+            window.currentLang = lang;
             
             const html = document.documentElement;
             html.setAttribute('lang', lang);
@@ -1550,15 +1550,15 @@
             const drawerEnBtn = document.getElementById('drawer-lang-en');
 
             if (lang === 'he') {
-                if(heBtn) heBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all bg-physio-cyan text-white shadow cursor-pointer";
-                if(enBtn) enBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all text-slate-400 hover:text-white cursor-pointer";
+                if(heBtn) heBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all bg-physio-cyan text-white shadow cursor-pointer relative z-50";
+                if(enBtn) enBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all text-slate-400 hover:text-white cursor-pointer relative z-50";
                 if(mobileHeBtn) mobileHeBtn.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer";
                 if(mobileEnBtn) mobileEnBtn.className = "px-2.5 py-0.5 rounded-full text-xs font-bold text-slate-400 cursor-pointer";
                 if(drawerHeBtn) drawerHeBtn.className = "px-3 py-1 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer";
                 if(drawerEnBtn) drawerEnBtn.className = "px-3 py-1 rounded-full text-xs font-bold text-slate-400 cursor-pointer";
             } else {
-                if(enBtn) enBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all bg-physio-cyan text-white shadow cursor-pointer";
-                if(heBtn) heBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all text-slate-400 hover:text-white cursor-pointer";
+                if(enBtn) enBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all bg-physio-cyan text-white shadow cursor-pointer relative z-50";
+                if(heBtn) heBtn.className = "px-3.5 py-1 rounded-full text-xs font-extrabold transition-all text-slate-400 hover:text-white cursor-pointer relative z-50";
                 if(mobileEnBtn) mobileEnBtn.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer";
                 if(mobileHeBtn) mobileHeBtn.className = "px-2.5 py-0.5 rounded-full text-xs font-bold text-slate-400 cursor-pointer";
                 if(drawerEnBtn) drawerEnBtn.className = "px-3 py-1 rounded-full text-xs font-bold bg-physio-cyan text-white cursor-pointer";
@@ -1579,7 +1579,7 @@
             });
 
             // Update Pain Area Selector
-            selectPainArea(activePainKey, false);
+            selectPainArea(window.activePainKey, false);
 
             // Update Journey Modal Body
             populateJourneyModal();
@@ -1593,30 +1593,30 @@
             try {
                 localStorage.setItem('therapysport_lang', lang);
             } catch (e) {}
-        }
+        };
 
         // Mobile Menu Controls
-        function openMobileMenu() {
+        window.openMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
             if (menu) {
                 menu.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
-        }
+        };
 
-        function closeMobileMenu() {
+        window.closeMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
             if (menu) {
                 menu.classList.add('hidden');
                 document.body.style.overflow = '';
             }
-        }
+        };
 
         // Gallery Carousel Controls
-        function updateGallerySlider() {
+        window.updateGallerySlider = function() {
             const slides = document.querySelectorAll('.gallery-slide');
             slides.forEach((slide, index) => {
-                if (index === currentGalleryIndex) {
+                if (index === window.currentGalleryIndex) {
                     slide.classList.remove('opacity-0');
                     slide.classList.add('opacity-100');
                 } else {
@@ -1627,30 +1627,30 @@
 
             const dots = document.querySelectorAll('#gallery-dots span');
             dots.forEach((dot, index) => {
-                if (index === currentGalleryIndex) {
+                if (index === window.currentGalleryIndex) {
                     dot.className = "w-2.5 h-2.5 rounded-full bg-physio-cyan cursor-pointer transition-all shadow";
                 } else {
                     dot.className = "w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white cursor-pointer transition-all";
                 }
             });
-        }
+        };
 
-        function nextGallery() {
-            currentGalleryIndex = (currentGalleryIndex + 1) % totalGallerySlides;
+        window.nextGallery = function() {
+            window.currentGalleryIndex = (window.currentGalleryIndex + 1) % window.totalGallerySlides;
             updateGallerySlider();
-        }
+        };
 
-        function prevGallery() {
-            currentGalleryIndex = (currentGalleryIndex - 1 + totalGallerySlides) % totalGallerySlides;
+        window.prevGallery = function() {
+            window.currentGalleryIndex = (window.currentGalleryIndex - 1 + window.totalGallerySlides) % window.totalGallerySlides;
             updateGallerySlider();
-        }
+        };
 
         // Pain Area Selector Function
-        function selectPainArea(key, updateHash = true) {
-            const lang = currentLang;
+        window.selectPainArea = function(key, updateHash = true) {
+            const lang = window.currentLang;
             const dict = painAreasData[lang] || painAreasData['he'];
             const data = dict[key] || dict['knee'];
-            activePainKey = key;
+            window.activePainKey = key;
 
             document.querySelectorAll('.pain-tab-btn').forEach(btn => {
                 btn.className = "pain-tab-btn whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all glass-card hover:border-physio-lightCyan text-slate-300 cursor-pointer";
@@ -1684,7 +1684,7 @@
             if (updateHash && window.history.pushState) {
                 window.history.pushState(null, null, `#pain-${key}`);
             }
-        }
+        };
 
         // Check URL Hash for Direct Pain Area Links
         function checkUrlHash() {
@@ -1702,9 +1702,9 @@
             const bodyContainer = document.getElementById('journey-modal-body');
             if (!bodyContainer) return;
 
-            if (currentLang === 'he') {
+            if (window.currentLang === 'he') {
                 bodyContainer.innerHTML = `
-                    <p>הבסיס הקליני של ד״ר דוד גרבר נשען על ניסיון עשיר, לימודים מתקדמים באירופה ובארה״ב ותפיסה הוליסטית של תנועת הגוף:</p>
+                    <p>הבסיס הקליני של ד'ר דוד גרבר נשען על ניסיון עשיר, לימודים מתקדמים באירופה ובארה״ב ותפיסה הוליסטית של תנועת הגוף:</p>
                     <div class="space-y-3 pt-2">
                         <div class="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
                             <strong class="text-white block text-sm">🎓 BA מ־Yeshiva University (ארה״ב)</strong>
@@ -1728,7 +1728,7 @@
                         </div>
                         <div class="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
                             <strong class="text-white block text-sm">🏃‍♂️ הניסיון האישי כספורטאי</strong>
-                            <span class="text-xs text-slate-400">כספורטאי פעיל בעצמו, ד״ר גרבר מבין את האתגר המנטלי והפיזי שבפציעה ואת התשוקה לחזור לפעילות מלאה.</span>
+                            <span class="text-xs text-slate-400">כספורטאי פעיל בעצמו, ד'ר גרבר מבין את האתגר המנטלי והפיזי שבפציעה ואת התשוקה לחזור לפעילות מלאה.</span>
                         </div>
                     </div>
                 `;
@@ -1766,25 +1766,25 @@
         }
 
         // Journey Modal Controls
-        function openJourneyModal() {
+        window.openJourneyModal = function() {
             const modal = document.getElementById('journey-modal');
             if (modal) {
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
-        }
+        };
 
-        function closeJourneyModal() {
+        window.closeJourneyModal = function() {
             const modal = document.getElementById('journey-modal');
             if (modal) {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
             }
-        }
+        };
 
         // Article / Guide Modal Controls
-        function openArticleModal(id) {
-            const langDict = articlesFullContent[currentLang] || articlesFullContent['he'];
+        window.openArticleModal = function(id) {
+            const langDict = articlesFullContent[window.currentLang] || articlesFullContent['he'];
             const data = langDict[id];
             if (!data) return;
             const tagEl = document.getElementById('modal-article-tag');
@@ -1799,20 +1799,20 @@
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
-        }
+        };
 
-        function closeArticleModal() {
+        window.closeArticleModal = function() {
             const modal = document.getElementById('article-modal');
             if (modal) {
                 modal.classList.add('hidden');
                 document.body.style.overflow = '';
             }
-        }
+        };
 
         // Reviews Carousel Controls
-        function updateReviewSlider() {
-            const list = reviewsData[currentLang] || reviewsData['he'];
-            const item = list[currentReviewIndex] || list[0];
+        window.updateReviewSlider = function() {
+            const list = reviewsData[window.currentLang] || reviewsData['he'];
+            const item = list[window.currentReviewIndex] || list[0];
 
             const authorEl = document.getElementById('review-author');
             const roleEl = document.getElementById('review-role');
@@ -1827,7 +1827,7 @@
             // Correct Prev/Next Arrow Symbols according to document direction
             const prevSymbol = document.getElementById('prev-arrow-symbol');
             const nextSymbol = document.getElementById('next-arrow-symbol');
-            if (currentLang === 'he') {
+            if (window.currentLang === 'he') {
                 if (prevSymbol) prevSymbol.textContent = '→';
                 if (nextSymbol) nextSymbol.textContent = '←';
             } else {
@@ -1837,28 +1837,28 @@
 
             const dots = document.querySelectorAll('#review-dots span');
             dots.forEach((dot, index) => {
-                if (index === currentReviewIndex) {
+                if (index === window.currentReviewIndex) {
                     dot.className = "w-3.5 h-3.5 rounded-full bg-physio-cyan cursor-pointer transition-all shadow-md";
                 } else {
                     dot.className = "w-3.5 h-3.5 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer transition-all";
                 }
             });
-        }
+        };
 
-        function nextReview() {
-            currentReviewIndex = (currentReviewIndex + 1) % totalReviews;
+        window.nextReview = function() {
+            window.currentReviewIndex = (window.currentReviewIndex + 1) % window.totalReviews;
             updateReviewSlider();
-        }
+        };
 
-        function prevReview() {
-            currentReviewIndex = (currentReviewIndex - 1 + totalReviews) % totalReviews;
+        window.prevReview = function() {
+            window.currentReviewIndex = (window.currentReviewIndex - 1 + window.totalReviews) % window.totalReviews;
             updateReviewSlider();
-        }
+        };
 
-        function goToReview(index) {
-            currentReviewIndex = index;
+        window.goToReview = function(index) {
+            window.currentReviewIndex = index;
             updateReviewSlider();
-        }
+        };
 
         // Scroll & Header Background Effect
         window.addEventListener('scroll', () => {
@@ -1895,7 +1895,7 @@
                             closeMobileMenu();
                             const headerOffset = 90;
                             const elementPosition = targetEl.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset) - headerOffset;
                             window.scrollTo({
                                 top: offsetPosition,
                                 behavior: 'smooth'
@@ -1933,7 +1933,7 @@
             document.querySelectorAll('#gallery-dots span').forEach(dot => {
                 dot.addEventListener('click', () => {
                     const idx = parseInt(dot.getAttribute('data-gallery-dot') || '0', 10);
-                    currentGalleryIndex = idx;
+                    window.currentGalleryIndex = idx;
                     updateGallerySlider();
                 });
             });
