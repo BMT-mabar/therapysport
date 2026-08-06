@@ -263,18 +263,50 @@
             </p>
 
             <!-- Trust Subline -->
-            <p class="text-xs sm:text-sm text-physio-lightCyan font-semibold mb-8 tracking-wide opacity-95" data-i18n="hero.trustLine">
+            <p class="text-xs sm:text-sm text-physio-lightCyan font-semibold mb-6 tracking-wide opacity-95" data-i18n="hero.trustLine">
                 ד'ר דוד גרבר, PT, DPT | פיזיותרפיסט משנת 1997 | טיפול אישי אחד-על-אחד
             </p>
 
-            <!-- Call to Actions -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a id="hero-whatsapp-btn" href="https://wa.me/972523630709?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%B4%D7%A8%20%D7%92%D7%A8%D7%91%D7%A8%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%90%D7%91%D7%97%D7%95%D7%9F%20%D7%A4%D7%99%D7%96%D7%99%D7%95%D7%AA%D7%A8%D7%A4%D7%99%D7%94%20%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%20%D7%91%D7%B4TherapySport." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-physio-whatsapp hover:bg-physio-whatsappHover text-white font-extrabold text-base px-8 py-4 rounded-xl shadow-xl shadow-physio-whatsapp/25 hover:scale-105 transition-all flex items-center justify-center gap-2.5">
+            <!-- Custom Insoles Marketing & SEO Highlight Card -->
+            <div id="hero-insoles-card" data-i18n="hero.insolesMarketing">
+                <div class="glass-card bg-slate-900/90 border border-physio-lightCyan/40 rounded-2xl p-4 sm:p-5 max-w-3xl mx-auto mb-8 text-rtl-right shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-physio-lightCyan transition-all">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-physio-lightCyan/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <div class="flex-shrink-0 p-3 bg-gradient-to-br from-physio-cyan/30 to-emerald-500/20 rounded-2xl border border-physio-lightCyan/50 text-2xl text-physio-lightCyan shadow-inner">
+                            👟
+                        </div>
+                        <div class="flex-1 text-center sm:text-rtl-right">
+                            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+                                <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30">מומחיות ביומכנית</span>
+                                <span class="text-xs font-extrabold text-physio-lightCyan bg-physio-cyan/10 px-2.5 py-0.5 rounded-full border border-physio-cyan/30">אבחון דריכה דינמי</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black text-white group-hover:text-physio-lightCyan transition-colors">
+                                מדרסים ביומכניים בהתאמה אישית בזיכרון יעקב
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                                פתרון קליני ושיווקי מתקדם להפחתת עומסים מכף הרגל, גיד אכילס, הברכיים והגב התחתון – בהתאמה ביומכנית מדויקת לספורטאים ולשימוש יומי.
+                            </p>
+                        </div>
+                        <a href="#services" onclick="selectPainArea('ankle')" class="flex-shrink-0 bg-physio-cyan/20 hover:bg-physio-cyan text-physio-lightCyan hover:text-white px-4 py-2.5 rounded-xl text-xs font-extrabold border border-physio-lightCyan/50 transition-all whitespace-nowrap">
+                            אבחון מדרסים ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Actions (3-Button Layout) -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-3.5 max-w-2xl mx-auto">
+                <a id="hero-whatsapp-btn" href="https://wa.me/972523630709?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%B4%D7%A8%20%D7%92%D7%A8%D7%91%D7%A8%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%90%D7%91%D7%97%D7%95%D7%9F%20%D7%A4%D7%99%D7%96%D7%99%D7%95%D7%AA%D7%A8%D7%A4%D7%99%D7%94%20%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%20%D7%91%D7%B4TherapySport." target="_blank" rel="noopener noreferrer" class="w-full md:w-auto bg-physio-whatsapp hover:bg-physio-whatsappHover text-white font-extrabold text-base px-6 py-4 rounded-xl shadow-xl shadow-physio-whatsapp/25 hover:scale-105 transition-all flex items-center justify-center gap-2">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                     <span data-i18n="hero.ctaPrimary">תיאום אבחון ראשוני</span>
                 </a>
                 
-                <a href="#about" class="w-full sm:w-auto glass-card hover:bg-slate-800/80 text-slate-200 hover:text-white font-bold text-base px-7 py-4 rounded-xl border border-slate-700 hover:border-physio-lightCyan/40 transition-all text-center" data-i18n="hero.ctaSecondary">
+                <a href="#services" class="w-full md:w-auto bg-gradient-to-r from-physio-cyan/20 to-sky-500/20 hover:from-physio-cyan/40 hover:to-sky-500/40 text-physio-lightCyan border border-physio-lightCyan/50 hover:border-physio-lightCyan hover:text-white font-bold text-base px-6 py-4 rounded-xl shadow-lg transition-all text-center flex items-center justify-center gap-2 group">
+                    <span>🎯</span>
+                    <span data-i18n="hero.ctaServices">מענה לפי אזור קושי</span>
+                </a>
+
+                <a href="#about" class="w-full md:w-auto glass-card hover:bg-slate-800/80 text-slate-200 hover:text-white font-bold text-base px-6 py-4 rounded-xl border border-slate-700 hover:border-physio-lightCyan/40 transition-all text-center" data-i18n="hero.ctaSecondary">
                     הגישה של TherapySport
                 </a>
             </div>
@@ -1036,6 +1068,7 @@
                 "hero.subtitle": "טיפול אישי המשלב פיזיותרפיה מבוססת ראיות, אבחון תנועה, טכניקות ידניות, שיקום ספורטיבי ומדרסים בהתאמה אישית.",
                 "hero.trustLine": "ד'ר דוד גרבר, PT, DPT | פיזיותרפיסט משנת 1997 | טיפול אישי אחד-על-אחד",
                 "hero.ctaPrimary": "תיאום אבחון ראשוני",
+                "hero.ctaServices": "מענה לפי אזור קושי",
                 "hero.ctaSecondary": "הגישה של TherapySport",
                 "quick.wa": "פנייה ישירה ב-WhatsApp",
                 "quick.call": "חיוג: 052-3630709",
@@ -1157,6 +1190,7 @@
                 "hero.subtitle": "Personalized evidence-based physical therapy, movement analysis, manual techniques, sports rehab, and custom biomechanical insoles.",
                 "hero.trustLine": "Dr. David Garber, PT, DPT | Licensed Physical Therapist since 1997 | 1-on-1 Personal Care",
                 "hero.ctaPrimary": "Book Initial Assessment",
+                "hero.ctaServices": "Care by Condition",
                 "hero.ctaSecondary": "TherapySport Approach",
                 "quick.wa": "Direct WhatsApp Inquiry",
                 "quick.call": "Call: 052-3630709",
@@ -1578,6 +1612,9 @@
                 el.textContent = lang === 'he' ? '←' : '→';
             });
 
+            // Update Insoles SEO Marketing Card
+            updateInsolesCard();
+
             // Update Pain Area Selector
             selectPainArea(window.activePainKey, false);
 
@@ -1694,6 +1731,63 @@
                 if (painAreasData['he'][areaKey]) {
                     selectPainArea(areaKey, false);
                 }
+            }
+        }
+
+        // Update Custom Insoles SEO Marketing Card Content
+        function updateInsolesCard() {
+            const insolesContainer = document.getElementById('hero-insoles-card');
+            if (!insolesContainer) return;
+            if (window.currentLang === 'he') {
+                insolesContainer.innerHTML = `
+                <div class="glass-card bg-slate-900/90 border border-physio-lightCyan/40 rounded-2xl p-4 sm:p-5 max-w-3xl mx-auto mb-8 text-rtl-right shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-physio-lightCyan transition-all">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-physio-lightCyan/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <div class="flex-shrink-0 p-3 bg-gradient-to-br from-physio-cyan/30 to-emerald-500/20 rounded-2xl border border-physio-lightCyan/50 text-2xl text-physio-lightCyan shadow-inner">
+                            👟
+                        </div>
+                        <div class="flex-1 text-center sm:text-rtl-right">
+                            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+                                <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30">מומחיות ביומכנית</span>
+                                <span class="text-xs font-extrabold text-physio-lightCyan bg-physio-cyan/10 px-2.5 py-0.5 rounded-full border border-physio-cyan/30">אבחון דריכה דינמי</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black text-white group-hover:text-physio-lightCyan transition-colors">
+                                מדרסים ביומכניים בהתאמה אישית בזיכרון יעקב
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                                פתרון קליני ושיווקי מתקדם להפחתת עומסים מכף הרגל, גיד אכילס, הברכיים והגב התחתון – בהתאמה ביומכנית מדויקת לספורטאים ולשימוש יומי.
+                            </p>
+                        </div>
+                        <a href="#services" onclick="selectPainArea('ankle')" class="flex-shrink-0 bg-physio-cyan/20 hover:bg-physio-cyan text-physio-lightCyan hover:text-white px-4 py-2.5 rounded-xl text-xs font-extrabold border border-physio-lightCyan/50 transition-all whitespace-nowrap">
+                            אבחון מדרסים ↗
+                        </a>
+                    </div>
+                </div>`;
+            } else {
+                insolesContainer.innerHTML = `
+                <div class="glass-card bg-slate-900/90 border border-physio-lightCyan/40 rounded-2xl p-4 sm:p-5 max-w-3xl mx-auto mb-8 text-rtl-right shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-physio-lightCyan transition-all">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-physio-lightCyan/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <div class="flex-shrink-0 p-3 bg-gradient-to-br from-physio-cyan/30 to-emerald-500/20 rounded-2xl border border-physio-lightCyan/50 text-2xl text-physio-lightCyan shadow-inner">
+                            👟
+                        </div>
+                        <div class="flex-1 text-center sm:text-rtl-right">
+                            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+                                <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30">Biomechanical Expertise</span>
+                                <span class="text-xs font-extrabold text-physio-lightCyan bg-physio-cyan/10 px-2.5 py-0.5 rounded-full border border-physio-cyan/30">Dynamic Gait Analysis</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black text-white group-hover:text-physio-lightCyan transition-colors">
+                                Custom Biomechanical Insoles in Zichron Yaakov
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                                Advanced clinical solution for footprint load distribution, relieving Achilles, knee, and lower back strain for athletes and daily use.
+                            </p>
+                        </div>
+                        <a href="#services" onclick="selectPainArea('ankle')" class="flex-shrink-0 bg-physio-cyan/20 hover:bg-physio-cyan text-physio-lightCyan hover:text-white px-4 py-2.5 rounded-xl text-xs font-extrabold border border-physio-lightCyan/50 transition-all whitespace-nowrap">
+                            Insoles Assessment ↗
+                        </a>
+                    </div>
+                </div>`;
             }
         }
 
